@@ -5,7 +5,7 @@ class CreateOrdersTable < ActiveRecord::Migration
     	t.string :start_address, null: false
     	t.string :end_address, null: false
     	t.string :price, null: false
-    	t.boolean :delivered, default: false, null: false
+    	t.boolean :delivered, default: false
     	t.timestamps null: false
     end
   end
