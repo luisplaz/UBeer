@@ -83,3 +83,7 @@ input {
 	height: 10%;
 	margin-left: 11rem;
 }
+
+span .gear{
+text-align: right;
+}
