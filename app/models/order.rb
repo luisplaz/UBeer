@@ -1,4 +1,4 @@
 class Order < ActiveRecord::Base
-	validates :name, :start_address, :end_address, :price, :delivered, presence: true
+	validates :user_id, :start_address, :end_address, :price, presence: true
 
 end
