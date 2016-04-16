@@ -15,7 +15,6 @@ class OrdersController < ApplicationController
 
 		@query = order_data[:beer_kind].rstrip.squeeze(" ").gsub!(" ", "%20")
 		address = "1006+Avenue+of+the+Americas,10018"
-		binding.pry
 		delivery_api_uri = "https://www.delivery.com/api/data/search?search_type=alcohol&section=beer&address=" + address + "&order_time=ASAP&order_type=delivery&client_id=brewhacks2016&keyword=" + @query
 		response = HTTParty.get(delivery_api_uri)
 		beer = response["data"]["products"]
