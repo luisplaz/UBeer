@@ -1,0 +1,123 @@
+{
+   "results": [
+      {
+         "word_alternatives": [
+            {
+               "start_time": 0.03, 
+               "alternatives": [
+                  {
+                     "confidence": 1.0, 
+                     "word": "I"
+                  }
+               ], 
+               "end_time": 0.1
+            }, 
+            {
+               "start_time": 0.1, 
+               "alternatives": [
+                  {
+                     "confidence": 0.9137, 
+                     "word": "want"
+                  }
+               ], 
+               "end_time": 0.38
+            }, 
+            {
+               "start_time": 0.38, 
+               "alternatives": [
+                  {
+                     "confidence": 0.9138, 
+                     "word": "six"
+                  }
+               ], 
+               "end_time": 0.66
+            }, 
+            {
+               "start_time": 0.66, 
+               "alternatives": [
+                  {
+                     "confidence": 0.9138, 
+                     "word": "packs"
+                  }
+               ], 
+               "end_time": 1.15
+            }, 
+            {
+               "start_time": 1.15, 
+               "alternatives": [
+                  {
+                     "confidence": 0.9137, 
+                     "word": "of"
+                  }
+               ], 
+               "end_time": 1.23
+            }, 
+            {
+               "start_time": 1.23, 
+               "alternatives": [
+                  {
+                     "confidence": 1.0, 
+                     "word": "Sam"
+                  }
+               ], 
+               "end_time": 1.64
+            }, 
+            {
+               "start_time": 1.64, 
+               "alternatives": [
+                  {
+                     "confidence": 0.9979, 
+                     "word": "Adams"
+                  }
+               ], 
+               "end_time": 2.24
+            }
+         ], 
+         "alternatives": [
+            {
+               "timestamps": [
+                  [
+                     "I", 
+                     0.03, 
+                     0.1
+                  ], 
+                  [
+                     "want", 
+                     0.1, 
+                     0.38
+                  ], 
+                  [
+                     "six", 
+                     0.38, 
+                     0.66
+                  ], 
+                  [
+                     "packs", 
+                     0.66, 
+                     1.15
+                  ], 
+                  [
+                     "of", 
+                     1.15, 
+                     1.23
+                  ], 
+                  [
+                     "Sam", 
+                     1.23, 
+                     1.64
+                  ], 
+                  [
+                     "Adams", 
+                     1.64, 
+                     2.24
+                  ]
+               ], 
+               "confidence": 0.942, 
+               "transcript": "I want six packs of Sam Adams "
+            }
+         ], 
+         "final": true
+      }
+   ], 
+   "result_index": 0
+}
