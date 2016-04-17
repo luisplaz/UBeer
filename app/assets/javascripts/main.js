@@ -1,5 +1,6 @@
 var deliveryAddress = null;
 var comerceAddress = null;
+var estimate = null;
 
 $(document).ready(function() {
 	$("#start_button").click(function(e){
@@ -10,7 +11,6 @@ $(document).ready(function() {
 		$(".beer").toggleClass("rotate");
 		beer.play();
 		var price = null;
-		var estimate = null;
 		var merchantName = null;
 		var quantity = null;
 		var productName = null;
@@ -121,6 +121,7 @@ $(document).ready(function() {
 		$(".jumbotron").append('<h1 color="black">Delivery Information</h2><br>\
 			<img src="'+driver+'" class="driver-img"><br>\
 			<h4>John Driver</h4><br>\
+			<h4>ETA '+ estimate +' minutes</h4><br>\
 			<iframe width="600" height="450" frameborder="0" style="border:0" src="'+Url+'" allowfullscreen>\
 			</iframe>\
 				')
