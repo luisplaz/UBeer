@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
 	def create
 		order_data = {
 	    "deliver_at": "15:00:00",
-	    "deliver_to": "114 W. 24th Street, New York, NY 10011",
+	    "deliver_to": "119 W. 24th Street, New York, NY 10011",
 	    "customer_id": "1234",
 	    "beer_kind": "Budweiser", 
 	    "quantity": "6 pack"
