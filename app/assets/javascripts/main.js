@@ -39,7 +39,7 @@ $(document).ready(function() {
 			$("#start_button").remove();
 			$(".example").remove();
 			$(".form-group").append('<div class="container receipt">\
-				<h2>ORDER INFORMATION</h2>\
+				<h2>ORDER INFORMATION</h2><br>\
   				<img src="'+image+'" class="cart-img"><br><br>\
 				<form class="form-horizontal" role="form">\
 				<div class="form-group">\
@@ -110,6 +110,7 @@ $(document).ready(function() {
 
 	$(".form-group").on("click",".order-button",function(e){
 		e.preventDefault();
+		    var driver = "assets/driver.jpg"
 		    var Url = "https://www.google.com/maps/embed/v1/directions?";
             var origin = "origin=".concat(comerceAddress).concat("&");
             var destination = "destination=".concat(deliveryAddress).concat("&");
@@ -117,7 +118,10 @@ $(document).ready(function() {
             var key = "key=".concat("AIzaSyAVmLyfYUxUNkp_v32R3uo1WpcIPijXeVo");
             Url = Url.concat( origin, destination,mode,key);
 		$(".receipt").remove()
-		$(".jumbotron").append('<iframe width="600" height="450" frameborder="0" style="border:0" src="'+Url+'" allowfullscreen>\
+		$(".jumbotron").append('<h1 color="black">Delivery Information</h2><br>\
+			<img src="'+driver+'" class="driver-img"><br>\
+			<h4>John Driver</h4><br>\
+			<iframe width="600" height="450" frameborder="0" style="border:0" src="'+Url+'" allowfullscreen>\
 			</iframe>\
 				')
 		});
