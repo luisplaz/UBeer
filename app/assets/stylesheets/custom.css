@@ -89,3 +89,9 @@ input{
 .example{
 	opacity: 0.5;
 }
+
+.driver-img{
+	width: 28%;
+	height: 10%;
+	border-radius: 50%;
+}
