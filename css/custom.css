@@ -24,21 +24,21 @@ body{
 }
 
 .rotate {
-    -webkit-animation: spin .8s infinite linear;
-    animation: spin 1s infinite linear;
+	-webkit-animation: spin .8s infinite linear;
+	animation: spin 1s infinite linear;
 }
 @-webkit-keyframes spin {
-    100% { -webkit-transform: rotate(360deg); }
+	100% { -webkit-transform: rotate(360deg); }
 }
 @-moz-keyframes spin {
-    100% { -moz-transform: rotate(360deg); }
+	100% { -moz-transform: rotate(360deg); }
 }
 @keyframes spin {
-    100% {
-        -moz-transform:rotate(360deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);
-    }
+	100% {
+		-moz-transform:rotate(360deg);
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
 }
 
 button{
@@ -58,32 +58,34 @@ button{
 	background-color:red;
 }
 
-.jumbotron h1{
-	 color: #191919;
-}
-
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-    color: #191919;;
-    margin-right: 1rem;
-}
-input {
-  display: inline-block;
-  float: left;
-  color:black;
-  text-align: center;
-}
-
 .cart-img{
 	width: 28%;
 	height: 10%;
-	margin-left: 11rem;
 }
 
 span .gear{
-text-align: right;
+	text-align: right;
+}
+
+button:focus {outline:0;}
+
+.jumbotron{
+	background-color: white;
+}
+
+.jumbotron .container {
+	max-width: 60%;
+}
+
+input{
+	text-align: center;
+}
+
+.info{
+	background-color: #191919;
+	color: white;
+}
+
+.example{
+	opacity: 0.5;
 }
