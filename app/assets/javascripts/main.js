@@ -1,15 +1,14 @@
 $(document).ready(function() {
 	$("#start_button").click(function(e){
 		e.preventDefault();
-		var beer = new Audio("sounds/open_beer.wav");
+		var beer = new Audio("/assets/open_beer.wav");
 		$(".beer").toggleClass("rotate");
 		beer.play()
-
 		setTimeout(function(){
 			$("#start_button").remove();
 			$(".form-group").append('<div class="container">\
 				<h2>ORDER INFORMATION</h2>\
-  				<img src="img/budweiser-6.jpg" class="cart-img"><br><br>\
+  				<img src="/assets/budweiser-6.jpg" class="cart-img"><br><br>\
 				<form class="form-horizontal" role="form">\
 				<div class="form-group">\
 				<label class="control-label col-sm-2" for="name">Full Name</label>\

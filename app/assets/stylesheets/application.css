@@ -13,3 +13,96 @@
  *= require_tree .
  *= require_self
  */
+
+
+.my-input { 
+	height: 110px;
+	overflow: hidden;
+	white-space: pre-line;
+}
+
+.logo {
+	width:11rem;
+	height: 3rem;
+	margin-bottom: 1rem;
+}
+
+.beer {
+	width: 26.5rem;
+}
+
+.round {
+	border-radius: 15rem;
+}
+
+body{
+	background-color: white;
+	color: #191919;
+}
+
+.rotate {
+	-webkit-animation: spin .8s infinite linear;
+	animation: spin 1s infinite linear;
+}
+@-webkit-keyframes spin {
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+	100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+	100% {
+		-moz-transform:rotate(360deg);
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+
+button{
+	background: transparent;
+	border:none;
+}
+
+.left-float{
+	float:left;
+}
+
+.right-float{
+	float:right;
+}
+
+.nav-color{
+	background-color:red;
+}
+
+.cart-img{
+	width: 28%;
+	height: 10%;
+}
+
+span .gear{
+	text-align: right;
+}
+
+button:focus {outline:0;}
+
+.jumbotron{
+	background-color: white;
+}
+
+.jumbotron .container {
+	max-width: 60%;
+}
+
+input{
+	text-align: center;
+}
+
+.info{
+	background-color: #191919;
+	color: white;
+}
+
+.example{
+	opacity: 0.5;
+}
