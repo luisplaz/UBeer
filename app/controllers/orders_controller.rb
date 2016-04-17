@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 	    "deliver_to": "114 W. 24th Street, New York, NY 10011",
 	    "customer_id": "1234",
 	    "beer_kind": "Budweiser", 
-	    "quantity": "6 packs"
+	    "quantity": "6 pack"
 		}
 
 		query = order_data[:beer_kind].rstrip.squeeze(" ").gsub(" ", "%20")
@@ -29,11 +29,21 @@ class OrdersController < ApplicationController
 		default_merchant_address = default_merchant["location"] ## Address hash
 		
 		if request.xhr?
-			Order.create!(user_id: "Adam", start_address: order_data[:deliver_to], end_address: default_merchant_address["street"], price: price)
 
+			@order = Order.create!(user_id: "Adam", start_address: default_merchant_address["street"], end_address: order_data[:deliver_to], price: price)
+			render json: {order: @order,
+				whole_response: response,
+				beer: beer,
+				price: price,
+				merchants: merchants,
+				quantity: order_data[:quantity],
+				delivery_address: order_data[:deliver_to]
+			}
 		else
+
 			Order.create!(user_id: "Adam", start_address: order_data[:deliver_to], end_address: default_merchant_address["street"], price: price)
 			redirect_to root_path
+
 		end
 	end
 end
