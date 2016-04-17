@@ -1,14 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>UBeer</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+	<meta charset="UTF-8">
+	<title>UBEER</title>
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= javascript_include_tag 'application' %>
+	<%= csrf_meta_tags %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js" ></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			padding-top: 70px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<link rel="stylesheet" src="css/main.css">
+
 </head>
 <body>
+	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top nav-color" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="container text-center">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle left-float" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand right-float" href="#">UBEER</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#" target="_blank">Home</a></li>
+					<li><a href="#" target="_blank">Account</a></li>
+					<li><a href="#" target="_blank">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="text-center container" id="main-content">
+		<div class="jumbotron text-center">
+			<div class="form-group">
+				<div>
+					<button type="submit no-border" id="start_button">
+						<img src="/assets/Ubeer.png" alt="" class="beer round"></button>
+					</div>
+				</div>
+			</form>
+		</div>
 
-<%= yield %>
-
+		<h5 class="example"> Ex: "I want a six pack of budwesier"</h5>
+		<hr>
+		<div class="row">
+			<div class="col-xs-12">
+				<footer>
+					<p>&copy; Copyright 2016 UBEER</p>
+				</footer>
+			</div>
+		</div>
+	</div>
 </body>
-</html>
+</html>  

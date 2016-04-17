@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-	layout false
+	# layout false
 
 	def index
 
