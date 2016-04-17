@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+	layout false
 
 	def index
 
@@ -13,10 +14,26 @@ class OrdersController < ApplicationController
 	    "quantity": "6 packs"
 		}
 
-		@query = order_data[:beer_kind].rstrip.squeeze(" ").gsub!(" ", "%20")
+		query = order_data[:beer_kind].rstrip.squeeze(" ").gsub(" ", "%20")
 		address = "1006+Avenue+of+the+Americas,10018"
-		delivery_api_uri = "https://www.delivery.com/api/data/search?search_type=alcohol&section=beer&address=" + address + "&order_time=ASAP&order_type=delivery&client_id=brewhacks2016&keyword=" + @query
+		delivery_api_uri = "https://www.delivery.com/api/data/search?search_type=alcohol&section=beer&address=" + address + "&order_time=ASAP&order_type=delivery&client_id=brewhacks2016&keyword=" + query
 		response = HTTParty.get(delivery_api_uri)
-		beer = response["data"]["products"]
+		beer = response["data"]["products"][0]
+		price = beer["price"].to_s
+
+		merchants = response["data"]["merchants"]  ## Array of merchants willing to deliver
+
+		default_merchant = merchants.first ## Choose first merchant by default
+
+		default_merchant_name = default_merchant["summary"]["name"] 
+		default_merchant_address = default_merchant["location"] ## Address hash
+		
+		if request.xhr?
+			Order.create!(user_id: "Adam", start_address: order_data[:deliver_to], end_address: default_merchant_address["street"], price: price)
+
+		else
+			Order.create!(user_id: "Adam", start_address: order_data[:deliver_to], end_address: default_merchant_address["street"], price: price)
+			redirect_to root_path
+		end
 	end
 end
