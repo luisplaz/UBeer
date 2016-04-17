@@ -23,8 +23,7 @@ class OrdersController < ApplicationController
 
 		merchants = response["data"]["merchants"]  ## Array of merchants willing to deliver
 
-		default_merchant = merchants.first ## Choose first merchant by default
-
+		default_merchant = merchants.last ## Choose first merchant by default
 		default_merchant_name = default_merchant["summary"]["name"] 
 		default_merchant_address = default_merchant["location"] ## Address hash
 		
