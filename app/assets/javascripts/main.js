@@ -25,8 +25,9 @@ $(document).ready(function() {
       }).done(function(response){
       	price = response.price;
       	estimate = response.merchants[0].ordering.availability.delivery_estimate;
-      	merchantName = response.merchants[0].summary.name;
-      	comerceAddress = response.merchants[0].location.street;
+      	var rand = response.merchants[Math.floor(Math.random() * response.merchants.length)];
+      	merchantName = rand.summary.name;
+      	comerceAddress = rand.location.street;
       	quantity = response.quantity;
       	productName = response.beer.name;
       	deliveryAddress = response.delivery_address;
