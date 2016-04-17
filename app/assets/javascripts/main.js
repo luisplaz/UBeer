@@ -86,6 +86,6 @@ $(document).ready(function() {
 				</form>\
 				</div>\
 			')
-		},2000);
+		},7000);
 	});
 });
